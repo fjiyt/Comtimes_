@@ -81,6 +81,9 @@
     <string name="news_detail_cd_clip">clip image</string>
     <string name="news_detail_cd_comment">comment image</string>
 
+    <!-- Regiter-->
+    <string name="register">REGISTER</string>
+
 
 
 
