@@ -1,10 +1,12 @@
-package com.example.comtimes;
+package com.comtimes.android.comtimes.src.gallery;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.comtimes.android.comtimes.R;
 
 
 public class ImageActivity extends AppCompatActivity {

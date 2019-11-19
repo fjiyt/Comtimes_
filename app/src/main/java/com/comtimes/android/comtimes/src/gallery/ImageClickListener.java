@@ -1,4 +1,4 @@
-package com.example.comtimes;
+package com.comtimes.android.comtimes.src.gallery;
 
 import android.content.Context;
 import android.content.Intent;

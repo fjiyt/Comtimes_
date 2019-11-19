@@ -18,7 +18,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="0dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/view_activity_bg_top" />
+                android:src="@drawable/view_bg_top" />
 
             <ImageView
                 android:id="@+id/mypage_back_iv"
@@ -26,14 +26,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="30dp"
-                android:src="@drawable/view_activity_back_btn" />
+                android:src="@drawable/view_back_btn" />
 
             <ImageView
                 android:id="@+id/mypage_empty_profile_iv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@drawable/mypage_activity_empty_profile" />
+                android:src="@drawable/mypage_empty_profile" />
             <TextView
                 android:id="@+id/mypage_name"
                 android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
                 android:layout_below="@id/mypage_name"
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="160dp"
-                android:src="@drawable/mypage_activity_info_edit" />
+                android:src="@drawable/mypage_info_edit" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -75,8 +75,8 @@
             android:id="@android:id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/view_activity_bg_top"
-            android:outlineSpotShadowColor="@color/white"
+            android:background="@drawable/view_bg_top"
+            android:outlineSpotShadowColor="#ffffff"
             />
 
         <FrameLayout
