@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/news_list_rv_item_thumbnail_rv"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--android:layout_gravity="center">-->
+        <TextView
+            android:id="@+id/news_list_rv_item_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="5dp"/>
+            <!--android:text="월드프렌즈 ICT 봉사단 인터뷰 우즈베키스탄&가나편"/>-->
+
+        <TextView
+            android:id="@+id/news_list_rv_item_subtitle_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textColor="#000000" />
+            <!--android:text="재학생 인터뷰 · 윤정민 기자 · 2018.12.24"/>-->
+    </LinearLayout>
+
+</LinearLayout>
