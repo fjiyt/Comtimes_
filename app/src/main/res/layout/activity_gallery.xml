@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="30dp"
-            android:src="@drawable/view_activity_back_btn" />
+            android:src="@drawable/view_back_btn" />
 
         <ImageView
             android:id="@+id/gallery_share_iv"
@@ -29,7 +29,7 @@
             android:layout_alignEnd="@id/view_activity_bg_top"
             android:layout_marginTop="30dp"
             android:layout_marginRight="15dp"
-            android:src="@drawable/view_activity_share_btn"
+            android:src="@drawable/view_share_btn"
             android:layout_alignRight="@id/view_activity_bg_top" />
 
         <TextView
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="@string/gallery"
-            android:textColor="@color/white"
+            android:textColor="#ffffff"
             android:textSize="20sp"
             android:textStyle="bold" />
 

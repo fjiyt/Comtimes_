@@ -22,11 +22,16 @@
         <activity android:name=".src.login.LoginActivity"/>
         <activity android:name=".src.news_detail.NewsDetailActivity"/>
         <activity android:name=".src.news_list.NewsListActivity">
+        <activity android:name=".src.news_detail.NewsDetailActivity">
+        </activity>
+        <activity android:name=".src.gallery.GalleryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.int ent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".src.mypage.MypageActivity">
     </application>
 </manifest>

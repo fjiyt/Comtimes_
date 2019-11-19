@@ -1,9 +1,11 @@
-package com.example.comtimes;
+package com.comtimes.android.comtimes.src.mypage;
 
 import android.os.Bundle;
 import android.widget.TabHost;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.comtimes.android.comtimes.R;
 
 public class MypageActivity extends AppCompatActivity {
     @Override
