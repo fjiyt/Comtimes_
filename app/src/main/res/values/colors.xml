@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#39d6a8</color>
+    <color name="colorPrimaryDark">#24E4B8</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="textBlack">#1a1a1a</color>
+    <color name="textGray">#808080</color>
+    <color name="textWhite">#FFF</color>
+    <color name="centerBorderGray">#cacaca</color>
+    <color name="colorGray">#D6D3D3</color>
+    <color name="colorTop10News">#000</color>
+    <color name="colorShadow">#ECE7E7</color>
+
+    <color name="bgWhite">#FFF</color>
+</resources>

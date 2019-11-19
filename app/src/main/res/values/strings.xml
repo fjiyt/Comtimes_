@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">Comtimes</string>
+    <string name="loading">로딩중입니다.</string>
+    <string name="network_error">네트워크 연결이 원활하지 않습니다.</string>
+
+    <!-- Exception Strings -->
+    <string name="error_null">값을 불러오는데 실패했습니다</string>
+    <string name="denied_access">올바르지 않은 접근입니다</string>
+    <string name="get_api_example">GET API Example</string>
+    <string name="get_api_path_variable_example">GET API Path Variable Example</string>
+    <string name="post_api_body_data_example">POST API Body Data Example</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Common-->
+    <string name="zero_num">0</string>
+    <string name="cd_back">back button</string>
+    <string name="cd_defalut_profile">defalut profile image</string>
+
+    <!--Main-->
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="main_notice">컴퓨터학부\n공지사항</string>
+    <string name="main_calendar">컴퓨터학부\n일정</string>
+    <string name="main_reservation">스터디룸\n세미나실\n예약</string>
+    <string name="main_b_gallery">B컷 갤러리</string>
+    <string name="main_top">TOP</string>
+    <string name="main_10">10</string>
+    <string name="main_news">NEWS</string>
+
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+
+    <string name="main_cd_ham">hambuger button</string>
+    <string name="main_cd_search">search button</string>
+    <string name="main_cd_logo">comtimes word logo</string>
+    <string name="main_cd_notice">notice image</string>
+    <string name="main_cd_calendar">calendar image</string>
+    <string name="main_cd_reservation">reservation image</string>
+    <string name="main_cd_gallery">gallery image</string>
+
+    <!--Drawer-->
+    <string name="drawer_login">로그인하기</string>
+    <string name="drawer_news">소식 News</string>
+    <string name="drawer_event">행사 Event</string>
+    <string name="drawer_interview">인터뷰 Interview</string>
+    <string name="drawer_activity">학생 활동 Activity</string>
+    <string name="drawer_lecture">강연 Lecture</string>
+    <string name="drawer_infomation">정보 Info</string>
+    <string name="drawer_cd_defalut_profile">defalut profile image</string>
+    <string name="drawer_cd_home">home button</string>
+    <string name="drawer_cd_right_arrow">right arrow button</string>
+
+    <!--Login-->
+    <string name="login">LOG IN</string>
+    <string name="login_id">ID</string>
+    <string name="login_password">PW</string>
+    <string name="login_find_id">아이디 찾기</string>
+    <string name="login_find_pw">비밀번호 찾기</string>
+    <string name="login_register">REGISTER</string>
+
+
+    <string name="login_cd_logo">comtimes logo</string>
+    <string name="login_cd_login">login button</string>
+
+
+    <!--News Detail-->
+    <string name="news_detail_reporter">기자 ㆍ </string>
+
+    <string name="news_detail_category">인터뷰</string>
+    <string name="news_detail_cd_share">share button</string>
+    <string name="news_detail_cd_clip">clip image</string>
+    <string name="news_detail_cd_comment">comment image</string>
+
+
+
+
+</resources>

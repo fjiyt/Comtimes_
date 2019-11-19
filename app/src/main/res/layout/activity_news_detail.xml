@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/greenish_teal_bg"
+        android:paddingStart="16dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/news_detail_back_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/cd_back"
+            android:src="@drawable/white_back_btn" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/news_detail_category_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/news_detail_category"
+            android:textColor="@color/textWhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/news_detail_share_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/main_cd_search"
+            android:src="@drawable/white_share_btn" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/news_detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="그대의 쉼표, 제 23대 학생회\n‘Comma’의 회장단을 만나다."
+                android:textColor="@color/textBlack"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="그대의 쉼표, 제 23대 학생회\n‘Comma’의 회장단을 만나다." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="‘Comma’와 함께 나아갑시다!"
+                android:textColor="@color/textGray"
+                android:textSize="14sp"
+                tools:text="‘Comma’와 함께 나아갑시다!" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/news_detail_reporter_profile_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/cd_defalut_profile"
+                    android:src="@drawable/defalut_profile_img" />
+
+                <TextView
+                    android:id="@+id/news_detail_reporter_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:text="유민욱"
+                    android:textColor="@color/textGray"
+                    android:textSize="12sp"
+                    tools:text="유민욱" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/news_detail_reporter"
+                    android:textColor="@color/textGray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/news_detail_date_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="2019.05.12"
+                    android:textColor="@color/textGray"
+                    android:textSize="12sp"
+                    tools:text="2019.05.12"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/news_detail_clip_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/news_detail_cd_clip"
+                    android:src="@drawable/clip_btn_off" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/zero_num"
+                    android:textColor="@color/textBlack"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/news_detail_comment_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/news_detail_cd_comment"
+                    android:src="@drawable/comment_img_off" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/zero_num"
+                    android:textColor="@color/textBlack"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/news_detail_title_box_bottom_border" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:text="2019년 9월 25일부터 27일까지, 총 3일 동안 2019숭실대학교 대동제 ‘SSUtopia’가 개최되었습니다.개강 후 수업과 과제에 대한 스트레스를 받고 있던 학우들 모두 축제를 통해 한시름 덜어내고 즐거움에 동화될 수 있었던 행복한 행사였습니다."
+                android:textColor="@color/textBlack"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/news_detail_image1_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:scaleType="centerInside"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:text=" 이번 축제는 애니메이션 ‘주토피아’에서 착안한 동화를 컨셉으로 기획되었습니다. 따라서 ‘어린 왕자’, ‘이상한 나라의 앨리스’, ‘헨젤과 그레텔’과 관련된 다양한 조형물들이 캠퍼스 곳곳에 설치되었습니다. 주간 부스는 타로, 메이크업, 캘리그라피를 체험할 수 있는 체험 부스와 바이킹과 4D 라이더를 탈 수 있는 놀이공원 부스가 있었고 마지막으로 여러 학생이 진행하는 다양한 장터, 먹거리 부스들이 중앙광장을 가득 채우고 있었습니다."
+                android:textColor="@color/textBlack"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/news_detail_image2_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:scaleType="centerInside"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:text="IT 대학에서 준비한 주간 부스의 이름은 ‘BENEFIT’이 있었습니다. ‘BENEFIT’은 판매 부스와 이벤트 부스로 구성되어있었습니다. 판매 부스에서는 아이스크림 추로스, 고구마 치즈스틱 콜팝, 초코바나나 쉐이크 세 가지의 먹거리를 판매하였고 이벤트 부스에서는 ‘굴려버려IT’이라는 공을 다양한 방법으로 차서 볼링핀을 넘어뜨려 가장 많이 넘어뜨린 사람이 상품을 받는 이벤트 또한 진행하였습니다. 25일 오후 7시 이후부터는 ‘숭실고교괴담’이라는 BENEFIT의 메인 행사가 진행되었습니다. 이 행사는 체험자가 숭실고등학교 특별반 학생으로 입학하게 된 컨셉으로 진행되는 귀신의 집 행사였습니다. 이 이벤트는  오픈 시간 전부터 여러 학생이 줄을 서서 기다릴 만큼  많은 인기를 끌었습니다."
+                android:textColor="@color/textBlack"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/news_detail_image3_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:scaleType="centerInside"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:text="해가 저물고 주간 부스들이 철거된 이후에도 다양한 야간 부스 덕분에 축제의 열기는 식을 줄 몰랐습니다. 야간부스에는 다양한 컨셉을 가진 주점들이 열렸는데 그 중 컴퓨터학부 소모임이 진행했던 주점은 총 다섯 곳이었습니다. 26일 밤에는 ‘XANG’, 27일 밤에는 ‘XANG’과 ‘OS’, ‘CBR’, ‘스플럭’, ‘하라오름’이 주점을 운영했습니다. ‘XANG’은 크리스마스, ‘CBR’은 세계 동물의 날, ‘OS’는 바다의 날, 그리고 ‘스플럭’은 할로윈을 컨셉으로 잡아, 주점에 온 학우들에게 색다른 추억을 선사해주었습니다."
+                android:textColor="@color/textBlack"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/news_detail_image4_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:scaleType="centerInside"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:text="또한 ‘BENEFIT’에서 진행한 주점 이벤트가 있었는데, 첫 번째 이벤트는 ‘내가 바로 에너자이저!’ 로 자전거 발전기를 빠르게 돌리는 학생들에게 상품을 지급하는 이벤트였습니다. 두 번째 이벤트는 ‘본인 방금 디비디비딥하는 상상함’ 으로 스태프와 ‘디비디비딥 게임’ 대결 후 일정 횟수 이상을 이기면 먹거리를 받을 수 있는 이벤트였습니다. 이렇게 IT 대학 학생회에서 진행한 다양한 이벤트들로 인해 많은 학우가 축제를 다채롭게 즐길 수 있었습니다."
+                android:textColor="@color/textBlack"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:text="이로써 3일간의 동화 같았던 축제가 끝났습니다. 이번 ‘SSUtopia’는 풍성한 즐길 거리, 먹거리, 볼거리가 마련되어 있었던 축제였습니다. 고된 학교생활에서 이번 대동제가 조금이나마 단비가 되었기를 바라며 이 축제에서 즐거웠던 기억을 원동력 삼아 곧 시작되는 중간고사와 남은 학기 생활에 열심히 임하시길 소망합니다."
+                android:textColor="@color/textBlack"
+                android:textSize="14sp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사진 촬영 : 김영규 미디어팀장(younggu911@icloud.com)\n이하영 기자(l4538@naver.com)\n윤정민 기자(jungmin0462@gmail.com)\n안유진 기자(youjin1939@gmail.com)"
+                android:textSize="12sp"
+                android:textColor="@color/textBlack"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="편집 : 김영규 미디어팀장(younggu911@icloud.com)\n박산해 편집팀장(tksgo2582@naver.com)\n박지영 국장(betty0402@naver.com"
+                android:textSize="12sp"
+                android:textColor="@color/textBlack"
+                android:layout_gravity="end"
+                android:gravity="end"/>
+        </LinearLayout>
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
