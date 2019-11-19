@@ -22,16 +22,16 @@ import java.util.ArrayList;
 
 public class MainActivity extends BaseActivity {
     //Drawer관련 멤버 변수 선언
-    ImageView btnOpenDrawer;
-    DrawerLayout drawerLayout;
-    View drawerView;
+    ImageView mOpenDrawerIv;
+    DrawerLayout mDrawerLayout;
+    View mDrawerView;
 
     //Recylcerview 관련 멤버 변수 선언
-    RecyclerView recentNewsRv;
-    Context context;                                //Activity 관련 정보 담고 있음.
-    LinearLayoutManager layoutManager;              //RecyclerView Item이 수직인지 수평인지 배치해주는 놈
-    RecentNewsRvAdapter recentNewsRvAdapter;        //RecyclerView에 아이템 뿌려주고 관리하는 놈
-    ArrayList<RecentNewsData> recentNewsDataList;   //RecyclerView Item에 들어가야될 DataList
+    RecyclerView mRecentNewsRv;
+    Context mContext;                                //Activity 관련 정보 담고 있음.
+    LinearLayoutManager mLayoutManager;              //RecyclerView Item이 수직인지 수평인지 배치해주는 놈
+    RecentNewsRvAdapter mRecentNewsRvAdapter;        //RecyclerView에 아이템 뿌려주고 관리하는 놈
+    ArrayList<RecentNewsData> mRecentNewsDataList;   //RecyclerView Item에 들어가야될 DataList
     RequestManager mGlideRequestManager;            // 이미지 관련 라이브러리 이해안될테니 그냥 복붙해주세요.
 
     //최근뉴스데이터리스트에 넣어줄 더미데이터 5개
@@ -47,10 +47,10 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         initViews();
 
-        btnOpenDrawer.setOnClickListener(new View.OnClickListener() {
+        mOpenDrawerIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                drawerLayout.openDrawer(drawerView);
+                mDrawerLayout.openDrawer(mDrawerView);
             }
         });
 
@@ -60,7 +60,7 @@ public class MainActivity extends BaseActivity {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.main_ham_btn :
-                drawerLayout.openDrawer(drawerView);
+                mDrawerLayout.openDrawer(mDrawerView);
                 break;
         }
     }
@@ -68,31 +68,31 @@ public class MainActivity extends BaseActivity {
     @Override
     public void initViews() {
         //Drawer
-        drawerLayout = findViewById(R.id.main_drawer_layout);
-        drawerView = findViewById(R.id.drawer);
-        btnOpenDrawer = findViewById(R.id.main_ham_btn);
+        mDrawerLayout = findViewById(R.id.main_drawer_layout);
+        mDrawerView = findViewById(R.id.drawer);
+        mOpenDrawerIv = findViewById(R.id.main_ham_btn);
 
 
         //RecylcerView
         //RecyclerView ID 등록 및 DataList 객체 생성
-        recentNewsRv = findViewById(R.id.main_recent_news_rv);
-        recentNewsDataList = new ArrayList<>();
+        mRecentNewsRv = findViewById(R.id.main_recent_news_rv);
+        mRecentNewsDataList = new ArrayList<>();
         //Glide RequestManager라는 걸 만들어서 MainActivity의 정보를 담아 Adapter에 보냅니다.
         mGlideRequestManager = Glide.with(this);
 
         //데이터리스트에 더미데이터들 삽입
-        recentNewsDataList.add(new RecentNewsData(titles[0], images[0]));
-        recentNewsDataList.add(new RecentNewsData(titles[1], images[1]));
-        recentNewsDataList.add(new RecentNewsData(titles[2], images[2]));
-        recentNewsDataList.add(new RecentNewsData(titles[3], images[3]));
-        recentNewsDataList.add(new RecentNewsData(titles[4], images[4]));
+        mRecentNewsDataList.add(new RecentNewsData(titles[0], images[0]));
+        mRecentNewsDataList.add(new RecentNewsData(titles[1], images[1]));
+        mRecentNewsDataList.add(new RecentNewsData(titles[2], images[2]));
+        mRecentNewsDataList.add(new RecentNewsData(titles[3], images[3]));
+        mRecentNewsDataList.add(new RecentNewsData(titles[4], images[4]));
 
         //Apater 등록과정
-        layoutManager  = new LinearLayoutManager(context, RecyclerView.HORIZONTAL, false);
-        recentNewsRvAdapter = new RecentNewsRvAdapter(recentNewsDataList , context , mGlideRequestManager); // Adapter생성 - datalist와 MainActivity정보랑 같이
+        mLayoutManager  = new LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false);
+        mRecentNewsRvAdapter = new RecentNewsRvAdapter(mRecentNewsDataList , mContext , mGlideRequestManager); // Adapter생성 - datalist와 MainActivity정보랑 같이
         //recyclerview에 layoutmanager와 adapter를 등록 - 마지막에!
-        recentNewsRv.setLayoutManager(layoutManager);
-        recentNewsRv.setAdapter(recentNewsRvAdapter);
+        mRecentNewsRv.setLayoutManager(mLayoutManager);
+        mRecentNewsRv.setAdapter(mRecentNewsRvAdapter);
     }
 
 }
