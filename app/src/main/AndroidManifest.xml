@@ -19,7 +19,13 @@
         <activity android:name=".src.main.MainActivity">
 
         </activity>
-        <activity android:name=".src.login.LoginActivity"/>
+        <activity android:name=".src.login.LoginActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".src.news_detail.NewsDetailActivity"/>
         <activity android:name=".src.news_list.NewsListActivity"/>
 
@@ -30,11 +36,6 @@
         <activity android:name=".src.edit.EditActivity">
         </activity>
         <activity android:name=".src.register.RegisterActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 </manifest>
