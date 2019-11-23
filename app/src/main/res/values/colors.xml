@@ -13,4 +13,5 @@
     <color name="colorShadow">#ECE7E7</color>
 
     <color name="bgWhite">#FFF</color>
+    <color name="lineGray">#cacaca</color>
 </resources>

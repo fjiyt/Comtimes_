@@ -83,30 +83,56 @@
             android:id="@android:id/tabcontent"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <TextView
+
+            <androidx.core.widget.NestedScrollView
                 android:id="@+id/tab_content1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Tab1"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:gravity="center" />
-            <TextView
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+            <androidx.core.widget.NestedScrollView
                 android:id="@+id/tab_content2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Tab2"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:gravity="center" />
-            <TextView
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+            <androidx.core.widget.NestedScrollView
                 android:id="@+id/tab_content3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Tab3"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:gravity="center" />
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
         </FrameLayout>
     </LinearLayout>
 </TabHost>
