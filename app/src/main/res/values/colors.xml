@@ -14,4 +14,6 @@
 
     <color name="bgWhite">#FFF</color>
     <color name="lineGray">#cacaca</color>
+
+    <color name="mypageIndicator">#C4FFFFFF</color>
 </resources>

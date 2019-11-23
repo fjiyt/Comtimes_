@@ -26,22 +26,38 @@
 
         <activity android:name=".src.gallery.GalleryActivity">
         </activity>
+<<<<<<< HEAD
         <activity android:name=".src.mypage.MypageActivity">
         </activity>
         <activity android:name=".src.edit.EditActivity">
         </activity>
         <activity android:name=".src.register.RegisterActivity">
+=======
+
+        <activity android:name=".src.mypage.MypageActivity"/>
+        <activity android:name=".src.edit.EditActivity"/>
+        <activity android:name=".src.register.RegisterActivity"/>
+
+        <activity android:name=".src.splash.SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
+>>>>>>> d58a941a74a163aad4490659af549ca6ba8b1dd6
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+<<<<<<< HEAD
         </activity>
         <activity android:name=".src.splash.SplashActivity"
             android:theme="@style/SplashTheme"
             android:screenOrientation="portrait">
+=======
+
+>>>>>>> d58a941a74a163aad4490659af549ca6ba8b1dd6
         </activity>
         <activity android:name=".src.gallery.ImageActivity">
         </activity>
+
     </application>
 </manifest>
