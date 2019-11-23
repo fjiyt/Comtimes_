@@ -17,7 +17,6 @@ import com.comtimes.android.comtimes.R;
 import com.comtimes.android.comtimes.src.login.LoginActivity;
 
 public class RegisterActivity extends AppCompatActivity {
-    RelativeLayout rl;
     ImageView mBackIv;
     EditText mIdEt, mPwEt, mPwCheckEt, mEmailEt;
     ImageButton mRegisterIbtn;
@@ -30,7 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     void initViews(){
-        rl=findViewById(R.id.reg_rl);
+
         mBackIv=findViewById(R.id.reg_back_iv);
         mIdEt=findViewById(R.id.reg_id_et);
         mPwEt=findViewById(R.id.reg_pw_et);
@@ -38,9 +37,6 @@ public class RegisterActivity extends AppCompatActivity {
         mEmailEt=findViewById(R.id.reg_email_et);
         mRegisterIbtn=findViewById(R.id.reg_register_iv);
         imm=(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-
-        rl.setOnClickListener(myClickListener);
-        mRegisterIbtn.setOnClickListener(myClickListener);
 
         mBackIv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +55,6 @@ public class RegisterActivity extends AppCompatActivity {
             hideKeyboard();
 
             switch(v.getId()){
-                case R.id.reg_rl:
                 case R.id.reg_register_iv:
                     break;
             }

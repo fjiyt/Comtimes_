@@ -28,15 +28,13 @@
         <activity android:name=".src.mypage.MypageActivity">
         </activity>
         <activity android:name=".src.edit.EditActivity">
+        </activity>
+        <activity android:name=".src.register.RegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".src.mypage.MypageActivity"/>
-        <activity android:name=".src.register.RegisterActivity">
-
         </activity>
     </application>
 </manifest>
