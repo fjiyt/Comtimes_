@@ -75,6 +75,7 @@
             android:layout_width="296dp"
             android:layout_height="32dp"
             android:textSize="16sp"
+            android:inputType="textUri"
             android:background="@drawable/round"
             android:layout_marginBottom="8dp"
             android:paddingStart="10dp"
@@ -193,7 +194,7 @@
     </LinearLayout>
 
         <ImageButton
-            android:id="@+id/reg_register_iv"
+            android:id="@+id/reg_register_Ibtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

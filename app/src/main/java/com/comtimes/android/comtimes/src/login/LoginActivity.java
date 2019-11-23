@@ -1,5 +1,6 @@
 package com.comtimes.android.comtimes.src.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -37,10 +38,17 @@ public class LoginActivity extends BaseActivity {
         mBackIbtn.setOnClickListener(this);
         mLoginIbtn.setOnClickListener(this);
         mRegisterTv.setOnClickListener(this);
+
+        Intent intent=getIntent();
+        String id = intent.getStringExtra("id");
+        String pw  =  intent.getStringExtra("pw");
+        mIdEt.setText(id);
+        mPwEt.setText(pw);
     }
 
     @Override
     public void onClick(View v) {
+
         switch (v.getId()){
             case R.id.login_login_ibtn:
                 break;
@@ -50,5 +58,14 @@ public class LoginActivity extends BaseActivity {
         }
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }

@@ -32,7 +32,6 @@ public class EditActivity extends AppCompatActivity {
     }
 
     void initViews(){
-        mrl=findViewById(R.id.edit_rl);
         mBackIv=findViewById(R.id.edit_back_iv);
         mIdEt=findViewById(R.id.edit_name_et);
         mPwEt=findViewById(R.id.edit_pw_et);
