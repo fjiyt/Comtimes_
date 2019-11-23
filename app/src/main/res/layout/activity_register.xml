@@ -161,7 +161,9 @@
             android:background="@drawable/round"
             android:textSize="16sp"
             android:paddingStart="10dp"
-            android:paddingEnd="10dp"/>
+            android:paddingEnd="10dp"
+            android:imeOptions="actionNext"
+            android:singleLine="true"/>
 
     </LinearLayout>
 
