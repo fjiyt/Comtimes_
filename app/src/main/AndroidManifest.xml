@@ -17,20 +17,38 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="n">
         <activity android:name=".src.main.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<<<<<<< HEAD
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".src.login.LoginActivity"/>
+        <activity android:name=".src.login.LoginActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".src.news_detail.NewsDetailActivity"/>
         <activity android:name=".src.news_list.NewsListActivity"/>
 
         <activity android:name=".src.gallery.GalleryActivity">
         </activity>
+
         <activity android:name=".src.mypage.MypageActivity"/>
         <activity android:name=".src.edit.EditActivity"/>
         <activity android:name=".src.register.RegisterActivity"/>
+
+        <activity android:name=".src.splash.SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".src.gallery.ImageActivity">
+        </activity>
+
     </application>
 </manifest>
