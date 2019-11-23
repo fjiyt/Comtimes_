@@ -21,10 +21,18 @@ import com.comtimes.android.comtimes.R;
 import com.comtimes.android.comtimes.src.BaseActivity;
 import com.comtimes.android.comtimes.src.login.LoginActivity;
 import com.comtimes.android.comtimes.src.main.models.RecentNewsData;
+import com.comtimes.android.comtimes.src.news_list.NewsListActivity;
 
 import java.util.ArrayList;
 
 public class MainActivity extends BaseActivity {
+    private static final int NEWS = 0;
+    private static final int EVENT = 1;
+    private static final int INTERVIEW  = 2;
+    private static final int ACTIVITY = 3;
+    private static final int LECTURE = 4;
+    private static final int INFO = 5;
+
     //Drawer관련 멤버 변수 선언
     private ImageView mOpenDrawerIv;
     private DrawerLayout mDrawerLayout;
@@ -75,6 +83,7 @@ public class MainActivity extends BaseActivity {
         mLectureLl = findViewById(R.id.drawer_lecture_ll);
         mInfoLl = findViewById(R.id.drawer_info_ll);
 
+        mOpenDrawerIv.setOnClickListener(this);
         mHomeIbtn.setOnClickListener(this);
         mLoginTv.setOnClickListener(this);
         mMyPageTv.setOnClickListener(this);
@@ -123,18 +132,31 @@ public class MainActivity extends BaseActivity {
             case R.id.drawer_mypage_tv:
                 break;
             case R.id.drawer_news_ll:
+                startNewsList(NEWS);
                 break;
             case R.id.drawer_event_ll:
+                startNewsList(EVENT);
                 break;
+            case R.id.drawer_interview_ll:
+                startNewsList(INTERVIEW);
             case R.id.drawer_activity_ll:
+                startNewsList(ACTIVITY);
                 break;
             case R.id.drawer_lecture_ll:
+                startNewsList(LECTURE);
                 break;
             case R.id.drawer_info_ll:
+                startNewsList(INFO);
                 break;
             case R.id.drawer_signout_tv:
                 break;
         }
+    }
+
+    private void startNewsList(int type){
+        Intent intent = new Intent(MainActivity.this, NewsListActivity.class);
+        intent.putExtra("type", type);
+        startActivity(intent);
     }
 
 
