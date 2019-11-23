@@ -20,6 +20,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:contentDescription="@string/cd_back"
+            android:src="@drawable/back_white"
+            android:padding="10dp"/>
             android:src="@drawable/back_white" />
 
         <TextView
@@ -49,6 +51,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:contentDescription="@string/main_cd_search"
+            android:src="@drawable/list_activity_search_btn"
+            android:padding="10dp"/>
             android:src="@drawable/list_activity_search_btn" />
     </LinearLayout>
 

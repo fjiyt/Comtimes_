@@ -9,8 +9,6 @@ import android.view.View.OnClickListener;
 
 public class ImageClickListener implements OnClickListener {
 
-
-
     Context context;
 
     int imageID;
@@ -19,8 +17,6 @@ public class ImageClickListener implements OnClickListener {
         this.context = context;
         this.imageID = imageID;
     }
-
-
 
     public void onClick(View v) {
         Intent intent = new Intent(context, ImageActivity.class);

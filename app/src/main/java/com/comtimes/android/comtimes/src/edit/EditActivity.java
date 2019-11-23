@@ -31,7 +31,6 @@ public class EditActivity extends AppCompatActivity {
     }
 
     void initViews(){
-        mrl=findViewById(R.id.edit_rl);
         mBackIv=findViewById(R.id.edit_back_iv);
         mIdEt=findViewById(R.id.edit_name_et);
         mPwEt=findViewById(R.id.edit_pw_et);
@@ -60,7 +59,6 @@ public class EditActivity extends AppCompatActivity {
             hideKeyboard();
 
             switch(v.getId()){
-                case R.id.edit_rl:
                 case R.id.edit_submit_iv:
                     break;
             }

@@ -1,6 +1,9 @@
 package com.comtimes.android.comtimes.src.login;
 
+<<<<<<< HEAD
 import android.app.Dialog;
+=======
+>>>>>>> d70722b00aaa4c63b1df89195486b802731024c0
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -65,10 +68,17 @@ public class LoginActivity extends BaseActivity {
         mBackIbtn.setOnClickListener(this);
         mLoginIbtn.setOnClickListener(this);
         mRegisterTv.setOnClickListener(this);
+
+        Intent intent=getIntent();
+        String id = intent.getStringExtra("id");
+        String pw  =  intent.getStringExtra("pw");
+        mIdEt.setText(id);
+        mPwEt.setText(pw);
     }
 
     @Override
     public void onClick(View v) {
+
         switch (v.getId()){
             case R.id.login_login_ibtn:
                 if(!Pattern.matches("^[a-zA-Z0-9]*$", mIdEt.getText().toString())){
@@ -89,4 +99,18 @@ public class LoginActivity extends BaseActivity {
 
         }
     }
+<<<<<<< HEAD
+=======
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+>>>>>>> d70722b00aaa4c63b1df89195486b802731024c0
 }

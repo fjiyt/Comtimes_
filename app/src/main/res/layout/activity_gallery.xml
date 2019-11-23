@@ -22,15 +22,6 @@
             android:layout_marginTop="30dp"
             android:src="@drawable/view_back_btn" />
 
-        <ImageView
-            android:id="@+id/gallery_share_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@id/view_activity_bg_top"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="15dp"
-            android:src="@drawable/view_share_btn"
-            android:layout_alignRight="@id/view_activity_bg_top" />
 
         <TextView
             android:layout_width="wrap_content"

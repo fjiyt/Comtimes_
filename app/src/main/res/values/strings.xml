@@ -18,6 +18,12 @@
     <string name="action_settings">Settings</string>
 
     <!--Common-->
+    <string name="category_news">소식</string>
+    <string name="category_event">행사</string>
+    <string name="category_interview">인터뷰</string>
+    <string name="category_activity">학생활동</string>
+    <string name="category_lecture">강연</string>
+    <string name="category_info">정보</string>
     <string name="zero_num">0</string>
     <string name="cd_back">back button</string>
     <string name="cd_defalut_profile">defalut profile image</string>
@@ -78,7 +84,6 @@
 
     <!--News Detail-->
     <string name="news_detail_reporter">기자 ㆍ </string>
-
     <string name="news_detail_category">인터뷰</string>
     <string name="news_detail_cd_share">share button</string>
     <string name="news_detail_cd_clip">clip image</string>
