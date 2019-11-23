@@ -32,12 +32,6 @@
         <activity android:name=".src.mypage.MypageActivity">
         </activity>
         <activity android:name=".src.edit.EditActivity">
-
-<<<<<<< HEAD
-=======
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
->>>>>>> 0e52685f2d8cb8b656c9f06557d7311105759db6
         </activity>
         <activity android:name=".src.register.RegisterActivity">
 
