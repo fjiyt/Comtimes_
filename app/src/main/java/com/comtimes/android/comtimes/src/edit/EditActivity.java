@@ -8,6 +8,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import androidx.annotation.Nullable;
@@ -18,7 +19,7 @@ import com.comtimes.android.comtimes.src.login.LoginActivity;
 import com.comtimes.android.comtimes.src.register.RegisterActivity;
 
 public class EditActivity extends AppCompatActivity {
-    RelativeLayout rl;
+    LinearLayout mrl;
     ImageView mBackIv;
     EditText mIdEt, mPwEt, mPwCheckEt, mEmailEt;
     ImageButton mSubmitIbtn;
@@ -31,7 +32,7 @@ public class EditActivity extends AppCompatActivity {
     }
 
     void initViews(){
-        rl=findViewById(R.id.edit_rl);
+        mrl=findViewById(R.id.edit_rl);
         mBackIv=findViewById(R.id.edit_back_iv);
         mIdEt=findViewById(R.id.edit_name_et);
         mPwEt=findViewById(R.id.edit_pw_et);
@@ -40,7 +41,7 @@ public class EditActivity extends AppCompatActivity {
         mSubmitIbtn=findViewById(R.id.edit_submit_iv);
         imm=(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
 
-        rl.setOnClickListener(myClickListener);
+        mrl.setOnClickListener(myClickListener);
         mSubmitIbtn.setOnClickListener(myClickListener);
 
         mBackIv.setOnClickListener(new View.OnClickListener() {
