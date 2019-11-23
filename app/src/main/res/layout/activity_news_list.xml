@@ -19,9 +19,8 @@
                 android:id="@+id/news_list_back_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/list_activity_back_btn"
-                android:layout_marginLeft="15dp"
-                android:layout_alignParentLeft="true"/>
+                android:src="@drawable/back_white"/>
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -42,8 +41,7 @@
                 android:id="@+id/news_list_search_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/list_activity_search_btn"
-                />
+                android:src="@drawable/list_activity_search_btn" />
 
         </LinearLayout>
     </FrameLayout>

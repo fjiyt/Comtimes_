@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer"
     android:layout_width="250dp"
     android:layout_height="match_parent"
@@ -15,8 +16,8 @@
         android:layout_weight="5" />
 
 
-    <ImageView
-        android:id="@+id/home_btn"
+    <ImageButton
+        android:id="@+id/drawer_home_ibtn"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_gravity="end"
@@ -51,6 +52,28 @@
         android:textSize="12sp" />
 
     <TextView
+        android:id="@+id/drawer_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/textBlack"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        tools:text="유민욱"/>
+
+    <TextView
+        android:id="@+id/drawer_mypage_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/drawer_mypage"
+        android:textSize="12sp"
+        android:textColor="@color/textGray"
+        android:drawableStart="@drawable/mypage_img"
+        android:drawablePadding="5dp"
+        android:visibility="gone"/>
+
+    <TextView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_weight="10" />
@@ -65,6 +88,7 @@
         android:paddingBottom="10dp">
 
         <TextView
+            android:id="@+id/drawer_news_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/drawer_news"
@@ -78,6 +102,7 @@
             android:layout_weight="1" />
 
         <ImageView
+            android:id="@+id/drawer_news_arrow_iv"
             android:layout_width="12dp"
             android:layout_height="12dp"
             android:contentDescription="@string/drawer_cd_right_arrow"
@@ -99,6 +124,7 @@
         android:paddingBottom="10dp">
 
         <TextView
+            android:id="@+id/drawer_event_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/drawer_event"
@@ -112,6 +138,7 @@
             android:layout_weight="1" />
 
         <ImageView
+            android:id="@+id/drawer_event_arrow_iv"
             android:layout_width="12dp"
             android:layout_height="12dp"
             android:contentDescription="@string/drawer_cd_right_arrow"
@@ -133,6 +160,7 @@
         android:paddingBottom="10dp">
 
         <TextView
+            android:id="@+id/drawer_interview_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/drawer_interview"
@@ -146,9 +174,11 @@
             android:layout_weight="1" />
 
         <ImageView
+            android:id="@+id/drawer_interview_arrow_iv"
             android:layout_width="12dp"
             android:layout_height="12dp"
-            android:src="@drawable/right_arrow_img" />
+            android:src="@drawable/right_arrow_img"
+            android:contentDescription="@string/drawer_cd_right_arrow"/>
     </LinearLayout>
 
     <TextView
@@ -166,6 +196,7 @@
         android:paddingBottom="10dp">
 
         <TextView
+            android:id="@+id/drawer_activity_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/drawer_activity"
@@ -179,6 +210,7 @@
             android:layout_weight="1" />
 
         <ImageView
+            android:id="@+id/drawer_activity_arrow_iv"
             android:layout_width="12dp"
             android:layout_height="12dp"
             android:contentDescription="@string/drawer_cd_right_arrow"
@@ -200,6 +232,7 @@
         android:paddingBottom="10dp">
 
         <TextView
+            android:id="@+id/drawer_lecture_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/drawer_lecture"
@@ -213,6 +246,7 @@
             android:layout_weight="1" />
 
         <ImageView
+            android:id="@+id/drawer_lecture_arrow_iv"
             android:layout_width="12dp"
             android:layout_height="12dp"
             android:contentDescription="@string/drawer_cd_right_arrow"
@@ -234,6 +268,7 @@
         android:paddingBottom="10dp">
 
         <TextView
+            android:id="@+id/drawer_info_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/drawer_infomation"
@@ -247,6 +282,7 @@
             android:layout_weight="1" />
 
         <ImageView
+            android:id="@+id/drawer_info_arrow_iv"
             android:layout_width="12dp"
             android:layout_height="12dp"
             android:contentDescription="@string/drawer_cd_right_arrow"
@@ -257,4 +293,16 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_weight="50"/>
+
+    <TextView
+        android:id="@+id/drawer_signout_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/drawer_logout"
+        android:textSize="14sp"
+        android:textColor="@color/textBlack"
+        android:textStyle="bold"
+        android:drawableStart="@drawable/logout_img"
+        android:drawablePadding="5dp"
+        android:visibility="gone"/>
 </LinearLayout>
