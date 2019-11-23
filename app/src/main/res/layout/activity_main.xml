@@ -433,5 +433,5 @@
         </androidx.core.widget.NestedScrollView>
     </LinearLayout>
 
-    <include layout="@layout/custom_drawable_layout" />
+    <include layout="@layout/custom_drawer_layout" />
 </androidx.drawerlayout.widget.DrawerLayout>

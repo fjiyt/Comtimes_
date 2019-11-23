@@ -50,12 +50,15 @@
 
     <!--Drawer-->
     <string name="drawer_login">로그인하기</string>
+    <string name="drawer_mypage">My Page</string>
     <string name="drawer_news">소식 News</string>
     <string name="drawer_event">행사 Event</string>
     <string name="drawer_interview">인터뷰 Interview</string>
     <string name="drawer_activity">학생 활동 Activity</string>
     <string name="drawer_lecture">강연 Lecture</string>
     <string name="drawer_infomation">정보 Info</string>
+    <string name="drawer_logout">LOG OUT</string>
+
     <string name="drawer_cd_defalut_profile">defalut profile image</string>
     <string name="drawer_cd_home">home button</string>
     <string name="drawer_cd_right_arrow">right arrow button</string>

@@ -4,8 +4,8 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/login_back_btn"
+    <ImageButton
+        android:id="@+id/login_back_ibtn"
         android:layout_width="10.3dp"
         android:layout_height="16dp"
         android:layout_alignParentTop="true"
@@ -111,8 +111,8 @@
         </LinearLayout>
 
 
-        <ImageView
-            android:id="@+id/login_login_btn"
+        <ImageButton
+            android:id="@+id/login_login_ibtn"
             android:layout_width="148dp"
             android:layout_height="32dp"
             android:layout_gravity="center_horizontal"
@@ -129,7 +129,6 @@
             android:textColor="@color/textGray"
             android:textSize="14sp"
             android:textStyle="bold"/>
-
     </LinearLayout>
 
 </RelativeLayout>
