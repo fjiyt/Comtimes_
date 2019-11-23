@@ -1,6 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/edit_rl"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/edit_back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/back_btn"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원정보 수정"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/textBlack" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/back_btn"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/infoedit_activity_empty_profile" />
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="wrap_content"
+            android:background="@color/lineGray"
+            android:layout_gravity="center"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="36dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="13sp"
+            android:layout_marginBottom="8dp"
+            android:text="이름" />
+
+        <EditText
+            android:id="@+id/edit_name_et"
+            android:layout_width="296dp"
+            android:layout_height="32dp"
+            android:textSize="16sp"
+            android:background="@drawable/round"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="13sp"
+            android:layout_marginBottom="8dp"
+            android:text="비밀번호" />
+
+        <EditText
+            android:id="@+id/edit_pw_et"
+            android:layout_width="296dp"
+            android:layout_height="32dp"
+            android:textSize="16sp"
+            android:background="@drawable/round"
+            android:layout_marginBottom="8dp"
+            android:inputType="textPassword"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="13sp"
+            android:layout_marginBottom="8dp"
+            android:text="비밀번호 확인" />
+
+        <EditText
+            android:id="@+id/edit_pw_check_et"
+            android:layout_width="296dp"
+            android:layout_height="32dp"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            android:background="@drawable/round"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="13sp"
+            android:layout_marginBottom="8dp"
+            android:text="이메일" />
+
+        <EditText
+            android:id="@+id/edit_email_et"
+            android:layout_width="296dp"
+            android:layout_height="32dp"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            android:background="@drawable/round"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+    </LinearLayout>
+        <ImageButton
+            android:id="@+id/edit_submit_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/infoedit_activity_submit_btn"
+            android:layout_marginTop="24dp"
+            android:background="#ffff"/>
+    </LinearLayout>
+
 
 </LinearLayout>

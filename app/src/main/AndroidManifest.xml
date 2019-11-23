@@ -24,6 +24,10 @@
         <activity android:name=".src.news_list.NewsListActivity"/>
 
         <activity android:name=".src.gallery.GalleryActivity">
+        </activity>
+        <activity android:name=".src.mypage.MypageActivity">
+        </activity>
+        <activity android:name=".src.edit.EditActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,5 +36,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".src.mypage.MypageActivity"/>
+        <activity android:name=".src.register.RegisterActivity">
+
+        </activity>
     </application>
 </manifest>
