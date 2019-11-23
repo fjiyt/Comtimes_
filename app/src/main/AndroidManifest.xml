@@ -17,7 +17,15 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="n">
         <activity android:name=".src.main.MainActivity">
+        </activity>
+        <activity android:name=".src.splash.SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".src.login.LoginActivity"/>
         <activity android:name=".src.news_detail.NewsDetailActivity">
@@ -25,11 +33,6 @@
         <activity android:name=".src.gallery.GalleryActivity">
         </activity>
         <activity android:name=".src.register.RegisterActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".src.gallery.ImageActivity">
         </activity>
