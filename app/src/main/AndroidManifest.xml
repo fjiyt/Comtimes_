@@ -33,8 +33,6 @@
         </activity>
         <activity android:name=".src.edit.EditActivity">
         </activity>
-        <activity android:name=".src.register.RegisterActivity">
-
-        </activity>
+        <activity android:name=".src.register.RegisterActivity"/>
     </application>
 </manifest>
