@@ -29,10 +29,8 @@
 
         <activity android:name=".src.gallery.GalleryActivity">
         </activity>
-        <activity android:name=".src.mypage.MypageActivity">
-        </activity>
-        <activity android:name=".src.edit.EditActivity">
-        </activity>
+        <activity android:name=".src.mypage.MypageActivity"/>
+        <activity android:name=".src.edit.EditActivity"/>
         <activity android:name=".src.register.RegisterActivity"/>
     </application>
 </manifest>
