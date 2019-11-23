@@ -20,12 +20,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.comtimes.android.comtimes.R;
+import com.comtimes.android.comtimes.src.BaseActivity;
 import com.comtimes.android.comtimes.src.login.LoginActivity;
 
 import java.util.regex.Pattern;
 
-public class RegisterActivity extends AppCompatActivity {
-    ImageView mBackIv;
+public class RegisterActivity extends BaseActivity {
+    ImageButton mBackIbtn;
     EditText mIdEt, mPwEt, mPwCheckEt, mNameEt, mEmailEt;
     TextView mIdErrorTv, mPwErrorTv, mEmailErrorTv;
     ImageButton mRegisterIbtn;
@@ -54,9 +55,25 @@ public class RegisterActivity extends AppCompatActivity {
         }
     };
 
-    void initViews() {
 
-        mBackIv = findViewById(R.id.reg_back_iv);
+    @Override
+    public void onClick(View view) {
+        super.onClick(view);
+        switch (view.getId())
+        {
+            case R.id.reg_back_ibtn:
+                finish();
+            case R.id.reg_register_Ibtn:
+                Intent intent = new Intent(this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+        }
+
+    }
+
+    public void initViews() {
+
+        mBackIbtn = findViewById(R.id.reg_back_ibtn);
 
         mIdEt = findViewById(R.id.reg_id_et);
         mIdEt.setFilters(new InputFilter[]{filter});
@@ -79,7 +96,8 @@ public class RegisterActivity extends AppCompatActivity {
         mRegisterIbtn = findViewById(R.id.reg_register_Ibtn);
 
         imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        
+
+        mBackIbtn.setOnClickListener(this);
 
         mRegisterIbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,6 +158,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
+
 //    private void hideKeyboard(){
 //        imm.hideSoftInputFromWindow(mIdEt.getWindowToken(),0);
 //        imm.hideSoftInputFromWindow(mPwEt.getWindowToken(), 0);

@@ -95,6 +95,12 @@
     <string name="gallery">B컷 갤러리</string>
 
 
+    <!--My Page-->
+    <string name="my_page_clip">스크랩함</string>
+    <string name="my_page_comment">댓글 단 기사</string>
+    <string name="my_page_view">본 기사</string>
+
+
 
 
 </resources>

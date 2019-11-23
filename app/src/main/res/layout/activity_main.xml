@@ -220,17 +220,19 @@
                             android:text="LIG 넥스원 인턴 배형진, 황인건 학우 인터뷰"
                             android:textColor="@color/colorTop10News"
                             android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2  "
                             android:textColor="@color/colorPrimary"
@@ -238,12 +240,14 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="그대의 쉼표, 제 23대 학생회 'Comma'의 회장단을 만나다."
                             android:textColor="@color/colorTop10News"
                             android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -266,7 +270,9 @@
                             android:text="자취생을 지켜줘! 홍대영학우 인터뷰"
                             android:textColor="@color/colorTop10News"
                             android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -289,7 +295,9 @@
                             android:text="야! 너두 할 수 있어!"
                             android:textColor="@color/colorTop10News"
                             android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -303,7 +311,7 @@
                             android:layout_height="wrap_content"
                             android:text="5  "
                             android:textColor="@color/colorPrimary"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -311,8 +319,10 @@
                             android:layout_height="wrap_content"
                             android:text="2019년도 컴퓨터학부 총엠티"
                             android:textColor="@color/colorTop10News"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -335,7 +345,9 @@
                             android:text="2019 숭실대학교 봄축제 ‘SSU:PECTRUM’"
                             android:textColor="@color/colorTop10News"
                             android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -358,7 +370,9 @@
                             android:text="2019 SCCC SCON Programming Contest"
                             android:textColor="@color/colorTop10News"
                             android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -381,7 +395,9 @@
                             android:text="2019 숭실대학교 IT 대학 봄축제"
                             android:textColor="@color/colorTop10News"
                             android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -396,7 +412,9 @@
                             android:text="9  "
                             android:textColor="@color/colorPrimary"
                             android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -404,7 +422,9 @@
                             android:text="국민은행 IT직 신입행원 11학번 오현식 동문 인터뷰"
                             android:textColor="@color/colorTop10News"
                             android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -418,7 +438,7 @@
                             android:text="10  "
                             android:textColor="@color/colorPrimary"
                             android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"/>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -426,7 +446,9 @@
                             android:text="Wong Kok Seng 교수님 인터뷰"
                             android:textColor="@color/colorTop10News"
                             android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

@@ -74,7 +74,7 @@
         android:textColor="@color/textGray"
         android:drawableStart="@drawable/mypage_img"
         android:drawablePadding="5dp"
-        android:visibility="gone"/>
+        android:visibility="visible"/>
 
     <TextView
         android:layout_width="0dp"

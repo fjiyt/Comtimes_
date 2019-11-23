@@ -129,6 +129,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1" />
 
+
                 <ImageView
                     android:id="@+id/news_detail_clip_iv"
                     android:layout_width="15dp"

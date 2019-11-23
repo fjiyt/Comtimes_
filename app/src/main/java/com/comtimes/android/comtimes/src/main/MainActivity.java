@@ -21,6 +21,7 @@ import com.comtimes.android.comtimes.R;
 import com.comtimes.android.comtimes.src.BaseActivity;
 import com.comtimes.android.comtimes.src.login.LoginActivity;
 import com.comtimes.android.comtimes.src.main.models.RecentNewsData;
+import com.comtimes.android.comtimes.src.mypage.MypageActivity;
 import com.comtimes.android.comtimes.src.news_list.NewsListActivity;
 
 import java.util.ArrayList;
@@ -130,6 +131,8 @@ public class MainActivity extends BaseActivity {
                 startActivity(loginIntent);
                 break;
             case R.id.drawer_mypage_tv:
+                Intent myPageIntent = new Intent(MainActivity.this, MypageActivity.class);
+                startActivity(myPageIntent);
                 break;
             case R.id.drawer_news_ll:
                 startNewsList(NEWS);
