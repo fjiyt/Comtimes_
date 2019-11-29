@@ -18,6 +18,8 @@ public class SplashActivity extends AppCompatActivity {
         try{
             Thread.sleep(1000);
             Intent intent=new Intent(this, MainActivity.class);
+
+
             startActivity(intent);
             finish();
         }

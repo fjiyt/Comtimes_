@@ -1,17 +1,8 @@
 package com.comtimes.android.comtimes.src.login;
 
-<<<<<<< HEAD
-import android.app.Dialog;
-=======
->>>>>>> d70722b00aaa4c63b1df89195486b802731024c0
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.InputFilter;
-import android.text.Spanned;
-import android.util.Log;
 import android.view.View;
-import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -23,17 +14,7 @@ import com.comtimes.android.comtimes.R;
 import com.comtimes.android.comtimes.src.BaseActivity;
 import com.comtimes.android.comtimes.src.register.RegisterActivity;
 
-import org.w3c.dom.ls.LSResourceResolver;
-import org.xml.sax.ErrorHandler;
-import org.xml.sax.SAXException;
-
-import java.io.IOException;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import javax.xml.transform.Result;
-import javax.xml.transform.Source;
-import javax.xml.validation.Validator;
 
 
 public class LoginActivity extends BaseActivity {
@@ -82,10 +63,14 @@ public class LoginActivity extends BaseActivity {
         switch (v.getId()){
             case R.id.login_login_ibtn:
                 if(!Pattern.matches("^[a-zA-Z0-9]*$", mIdEt.getText().toString())){
-                    Toast.makeText(LoginActivity.this,"아이디 형식을 지켜주세요.",Toast.LENGTH_SHORT).show();
+                    mIdEt.setBackground(getDrawable(R.drawable.login_et_red_border));
+                }else {
+                    mIdEt.setBackground(getDrawable(R.drawable.login_et_border));
                 }
                 if(!Pattern.matches("^[a-zA-Z0-9@!.#$%^&*_~()]*$", mPwEt.getText().toString())){
-                    Toast.makeText(LoginActivity.this,"비밀번호 형식을 지켜주세요.",Toast.LENGTH_SHORT).show();
+                    mPwEt.setBackground(getDrawable(R.drawable.login_et_red_border));
+                }else {
+                    mPwEt.setBackground(getDrawable(R.drawable.login_et_border));
                 }
                 break;
 
@@ -99,18 +84,4 @@ public class LoginActivity extends BaseActivity {
 
         }
     }
-<<<<<<< HEAD
-=======
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        finish();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
->>>>>>> d70722b00aaa4c63b1df89195486b802731024c0
 }

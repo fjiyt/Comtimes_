@@ -2,6 +2,8 @@ package com.comtimes.android.comtimes.src.register;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.Spanned;
@@ -10,6 +12,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -17,18 +20,21 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.comtimes.android.comtimes.R;
+import com.comtimes.android.comtimes.src.BaseActivity;
 import com.comtimes.android.comtimes.src.login.LoginActivity;
 
 import java.util.regex.Pattern;
 
-public class RegisterActivity extends AppCompatActivity {
-    ImageView mBackIv;
+public class RegisterActivity extends BaseActivity {
+    ImageButton mBackIbtn;
     EditText mIdEt, mPwEt, mPwCheckEt, mNameEt, mEmailEt;
+    TextView mIdErrorTv, mPwErrorTv, mEmailErrorTv;
     ImageButton mRegisterIbtn;
     InputMethodManager imm;
-    boolean Validation = true;
-    boolean Validation2 = true;
-
+    boolean idValidation = true;
+    boolean pwValidation = true;
+    boolean pwCheckValidation = true;
+    boolean emailValidation=true;
     @Override
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,80 +43,122 @@ public class RegisterActivity extends AppCompatActivity {
         initViews();
     }
 
-    private void fillEt(EditText editText) {
-        if (editText.getText().toString().matches(" "))
-            Validation2 = false;
-        else
-            Validation2 = true;
-    }
-
-
     protected InputFilter filter=new InputFilter() {
         @Override
         public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
             Pattern ps= Pattern.compile("^[a-zA-Z0-9]+$");
             if(!ps.matcher(source).matches())
-                Validation=false;
+                idValidation=false;
             else
-                Validation=true;
+                idValidation=true;
             return null;
         }
     };
 
 
-    void initViews() {
+    @Override
+    public void onClick(View view) {
+        super.onClick(view);
+        switch (view.getId())
+        {
+            case R.id.reg_back_ibtn:
+                finish();
+            case R.id.reg_register_Ibtn:
+                Intent intent = new Intent(this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+        }
 
-        mBackIv = findViewById(R.id.reg_back_iv);
+    }
+
+    public void initViews() {
+
+        mBackIbtn = findViewById(R.id.reg_back_ibtn);
 
         mIdEt = findViewById(R.id.reg_id_et);
-        fillEt(mIdEt);
         mIdEt.setFilters(new InputFilter[]{filter});
 
         mPwEt = findViewById(R.id.reg_pw_et);
-        fillEt(mPwEt);
         mPwEt.setFilters(new InputFilter[]{filter});
 
 
         mPwCheckEt = findViewById(R.id.reg_pw_check_et);
-        fillEt(mPwCheckEt);
         mPwCheckEt.setFilters(new InputFilter[]{filter});
 
         mNameEt = findViewById(R.id.reg_name_et);
-        fillEt(mNameEt);
 
         mEmailEt = findViewById(R.id.reg_email_et);
-        fillEt(mEmailEt);
+
+        mIdErrorTv=findViewById(R.id.reg_id_error_tv);
+        mPwErrorTv=findViewById(R.id.reg_pw_error_tv);
+        mEmailErrorTv=findViewById(R.id.reg_email_error_tv);
 
         mRegisterIbtn = findViewById(R.id.reg_register_Ibtn);
 
         imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        
+
+        mBackIbtn.setOnClickListener(this);
 
         mRegisterIbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!Validation){
-                    Toast.makeText(RegisterActivity.this,"형식을 지켜주세요.",Toast.LENGTH_SHORT).show();
+                if(!idValidation){
+                    mIdEt.setBackground(getDrawable(R.drawable.login_et_red_border));
+                    mIdErrorTv.setVisibility(View.VISIBLE);
+                    mIdErrorTv.setText("지원하지 않는 아이디 형식입니다.");
                 }
-                else if(!Validation2){
-                    Toast.makeText(RegisterActivity.this,"입력하지 않은 값이 있습니다.", Toast.LENGTH_SHORT).show();
-                }
-                else if(!mPwEt.getText().toString().equals(mPwCheckEt.getText().toString())){
-                    Toast.makeText(RegisterActivity.this, "비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    String id =  mIdEt.getText().toString();
-                    String pw=mPwEt.getText().toString();
-                    Intent intent=new Intent(RegisterActivity.this, LoginActivity.class);
-                    intent.putExtra("id", id);
-                    intent.putExtra("pw", pw);
-                    startActivity(intent);
-                    finish();
+                else {
+                    mIdEt.setBackground(getDrawable(R.drawable.login_et_border));
+                    mIdErrorTv.setVisibility(View.GONE);
                 }
 
+                if(!Pattern.matches("^[a-zA-Z0-9@!.#$%^&*_~()]*$", mPwEt.getText().toString())){
+                    mPwEt.setBackground(getDrawable(R.drawable.login_et_red_border));
+                    mPwCheckEt.setBackground(getDrawable(R.drawable.login_et_red_border));
+
+                    mPwErrorTv.setVisibility(View.VISIBLE);
+                    mPwErrorTv.setText("지원하지 않는 비밀번호 형식입니다.");
+
+                    mPwEt.setBackground(getDrawable(R.drawable.login_et_red_border));
+                    mPwCheckEt.setBackground(getDrawable(R.drawable.login_et_red_border));
+
+                    mPwErrorTv.setVisibility(View.VISIBLE);
+                    mPwErrorTv.setText("지원하지 않는 비밀번호 형식입니다.");
+                }
+                else {
+                    if (!mPwEt.getText().toString().equals(mPwCheckEt.getText().toString())) {
+                        mPwEt.setBackground(getDrawable(R.drawable.login_et_red_border));
+                        mPwCheckEt.setBackground(getDrawable(R.drawable.login_et_red_border));
+
+                        mPwErrorTv.setVisibility(View.VISIBLE);
+                        mPwErrorTv.setText("비밀번호가 일치하지 않습니다.");
+                    }
+                    else {
+                        mPwEt.setBackground(getDrawable(R.drawable.login_et_border));
+                        mPwCheckEt.setBackground(getDrawable(R.drawable.login_et_border));
+                        mPwErrorTv.setVisibility(View.GONE);
+                    }
+                }
+                if(!android.util.Patterns.EMAIL_ADDRESS.matcher(mEmailEt.getText()).matches()) {
+                    mEmailEt.setBackground(getDrawable(R.drawable.login_et_red_border));
+                    mEmailErrorTv.setVisibility(View.VISIBLE);
+                    mEmailErrorTv.setText("지원하지 않는 이메일 형식입니다.");
+                }
+                else{
+                    mEmailEt.setBackground(getDrawable(R.drawable.login_et_border));
+                    mEmailErrorTv.setVisibility(View.GONE);
+                }
+//                    String id =  mIdEt.getText().toString();
+//                    String pw=mPwEt.getText().toString();
+//                    Intent intent=new Intent(RegisterActivity.this, LoginActivity.class);
+//                    intent.putExtra("id", id);
+//                    intent.putExtra("pw", pw);
+//                    startActivity(intent);
+//                    finish();
             }
         });
     }
+
 //    private void hideKeyboard(){
 //        imm.hideSoftInputFromWindow(mIdEt.getWindowToken(),0);
 //        imm.hideSoftInputFromWindow(mPwEt.getWindowToken(), 0);

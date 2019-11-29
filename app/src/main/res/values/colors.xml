@@ -7,6 +7,7 @@
     <color name="textBlack">#1a1a1a</color>
     <color name="textGray">#808080</color>
     <color name="textWhite">#FFF</color>
+    <color name="textError">#FA0202</color>
     <color name="centerBorderGray">#cacaca</color>
     <color name="colorGray">#D6D3D3</color>
     <color name="colorTop10News">#000</color>
