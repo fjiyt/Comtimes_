@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.comtimes.android.comtimes.src.login.LoginActivity;
+import com.comtimes.android.comtimes.src.main.MainActivity;
 import com.comtimes.android.comtimes.src.register.RegisterActivity;
 
 public class SplashActivity extends AppCompatActivity {
@@ -16,7 +17,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         try{
             Thread.sleep(1000);
-            Intent intent=new Intent(this, LoginActivity.class);
+            Intent intent=new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
         }

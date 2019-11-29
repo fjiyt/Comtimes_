@@ -17,21 +17,13 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="n">
         <activity android:name=".src.main.MainActivity">
-<<<<<<< HEAD
 
         </activity>
-        <activity android:name=".src.login.LoginActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+        <activity android:name=".src.login.LoginActivity"/>
         <activity android:name=".src.news_detail.NewsDetailActivity"/>
         <activity android:name=".src.news_list.NewsListActivity"/>
 
-        <activity android:name=".src.gallery.GalleryActivity">
-        </activity>
+        <activity android:name=".src.gallery.GalleryActivity"/>
 
         <activity android:name=".src.mypage.MypageActivity"/>
         <activity android:name=".src.edit.EditActivity"/>
@@ -45,7 +37,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".src.gallery.ImageActivity">
         </activity>
