@@ -3,6 +3,7 @@ package com.comtimes.android.comtimes.src.main;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -42,6 +43,10 @@ public class MainActivity extends BaseActivity {
     private ImageButton mHomeIbtn;
     private TextView mLoginTv, mNameTv, mMyPageTv, mSignOutTv;
     private LinearLayout mNewsLl, mEventLl, mActivityLl, mLectureLl, mInfoLl;
+
+    //부가기능관련 멤버 변수 선언
+    private TextView mReservationTv;
+    private TextView mNoticeTV;
 
     //Recylcerview 관련 멤버 변수 선언
     private RecyclerView mRecentNewsRv;
@@ -84,6 +89,9 @@ public class MainActivity extends BaseActivity {
         mLectureLl = findViewById(R.id.drawer_lecture_ll);
         mInfoLl = findViewById(R.id.drawer_info_ll);
 
+        mReservationTv=findViewById(R.id.main_reservation_tv);
+        mNoticeTV=findViewById(R.id.main_notice_tv);
+
         mOpenDrawerIv.setOnClickListener(this);
         mHomeIbtn.setOnClickListener(this);
         mLoginTv.setOnClickListener(this);
@@ -94,6 +102,8 @@ public class MainActivity extends BaseActivity {
         mActivityLl.setOnClickListener(this);
         mLectureLl.setOnClickListener(this);
         mInfoLl.setOnClickListener(this);
+        mReservationTv.setOnClickListener(this);
+        mNoticeTV.setOnClickListener(this);
 
         //RecylcerView
         //RecyclerView ID 등록 및 DataList 객체 생성
@@ -150,6 +160,15 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.drawer_info_ll:
                 startNewsList(INFO);
+                break;
+            case R.id.main_reservation_tv:
+                Intent reservationIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSc8H9s3_ixtlZRgX26TNkKQ7KALg5tsvjj6wvgtpd36Eg0ukA/viewform"));
+                startActivity(reservationIntent);
+                break;
+            case R.id.main_notice_tv:
+                Intent noticeIntent = getPackageManager().getLaunchIntentForPackage("com.dbs.mthink.ssu");
+                noticeIntent.addFlags(noticeIntent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(noticeIntent);
                 break;
             case R.id.drawer_signout_tv:
                 break;
