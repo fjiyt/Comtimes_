@@ -1,18 +1,15 @@
 package com.comtimes.android.comtimes.src.news_list;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.comtimes.android.comtimes.R;
 import com.comtimes.android.comtimes.src.BaseActivity;
-import com.comtimes.android.comtimes.src.news_list.models.NewsData;
 
 import java.util.ArrayList;
 

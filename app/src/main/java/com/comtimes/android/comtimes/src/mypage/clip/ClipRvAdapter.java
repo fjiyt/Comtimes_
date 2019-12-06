@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.comtimes.android.comtimes.R;
-import com.comtimes.android.comtimes.src.news_list.models.NewsData;
 
 import java.util.ArrayList;
 
